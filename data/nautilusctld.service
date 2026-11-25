@@ -1,0 +1,10 @@
+[Unit]
+Description=Nautilus LCD — keeps images and GIFs on the Corsair Nautilus LCD
+
+[Service]
+ExecStart=%h/.local/bin/nautilusctld
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

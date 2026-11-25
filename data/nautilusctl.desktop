@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Nautilus LCD
+Comment=Images and GIFs on the Corsair Nautilus LCD
+Exec=nautilusctl-gui
+Icon=nautilusctl
+Terminal=false
+Categories=Utility;Settings;HardwareSettings;
+Keywords=corsair;lcd;nautilus;cooler;gif;
+StartupWMClass=dev.nautilusctl.Gui

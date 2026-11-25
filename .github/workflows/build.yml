@@ -1,0 +1,18 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm --needed base-devel pkgconf git \
+            libjpeg-turbo libpng giflib glib2 pango cairo gtk4
+      - uses: actions/checkout@v4
+      - name: Build
+        run: make CFLAGS="-O2 -g -Werror"
